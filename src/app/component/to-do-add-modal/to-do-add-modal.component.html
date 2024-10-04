@@ -1,0 +1,13 @@
+<div>
+    <h1>Add Task Form</h1>
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+        <input formControlName="title" placeholder="Title" required />
+        <textarea formControlName="description" placeholder="Description"></textarea>
+        <select formControlName="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit" [disabled]="!todoForm.valid">Add Todo</button>
+      </form>
+</div>

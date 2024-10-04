@@ -1,0 +1,12 @@
+<h1>Task List</h1>
+<ul>
+    <li *ngFor="let todo of toDoList$ | async">
+        testing
+        {{ todo.title }} ( {{ todo.priority }} )
+
+    </li>
+</ul>
+<button (click)="openAddModal()">Add Task</button>
+<div *ngIf="should_open_add_task_modal">
+    <modal-to-do-add-task></modal-to-do-add-task>
+</div>
